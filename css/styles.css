@@ -9,6 +9,7 @@
   --pictures-margin: 30px;
   --title-text-color: #212121;
   --btn-hover-color: #188ce8;
+  --background-color: #f5f4fa;
 }
 
 body {
@@ -156,7 +157,18 @@ ul {
 .header-item + .header-item {
   margin-left: 50px;
 }
-
+.mail {
+  vertical-align: middle;
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+}
+.tel {
+  margin-right: 10px;
+  vertical-align: middle;
+  fill: currentColor;
+}
 /* --------section 1-------- */
 
 .title {
@@ -231,30 +243,33 @@ ul {
 .reasons-item:last-child {
   margin-right: 0;
 }
-.reasons-item::before {
-  display: block;
-  border-radius: 4px;
-  content: '';
-  margin-bottom: 30px;
+.antena-icon {
+  fill: currentColor;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
-  /* outline: 1px solid red; */
-   background-image: url(../images/antenna.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-/* }
-.reasons-item:nth-child(1)::before {
-  background-image: url(../images/antenna.svg);
+  margin-bottom: 30px;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  margin-right: 10px;
+  fill: var(--contact-color);
+}
+
+/* .reasons-item:nth-child(1)::before {
+  background-image: url();
 }
 .reasons-item:nth-child(2)::before {
-  background-image: url(../images/clock.svg);
+  background-image: url();
 }
 .reasons-item:nth-child(3)::before {
-  background-image: url(../images/diagram.svg);
+  background-image: url();
 }
 .reasons-item:nth-child(4)::before {
-  background-image: url(../images/astronaut.svg);
+  background-image: url();
 } */
 .reasons-title {
   margin-bottom: 0;
@@ -342,6 +357,37 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.master-icon-list {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+.master-icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.master-icon-icon {
+  fill: #afb1b8;
+}
+.master-icon-link:hover {
+  background-color: var(--allocate-color);
+}
+.master-icon-link:focus {
+  background-color: var(--allocate-color);
+}
+.master-icon-link:hover .master-icon-icon {
+  fill: var(--button-text);
+}
+.master-icon-link:focus .master-soc-icon {
+  fill: var(--button-text);
+}
+.master-icon-item + .master-icon-item {
+  margin-left: 10px;
+}
 
 /* .specialist-item {
   flex-basis: calc(100% / 4 - var(--pictures-margin));
@@ -379,7 +425,47 @@ ul {
   letter-spacing: 0.03em;
   color: #757575;
 }
-
+/* --------section clients-------- */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  justify-content: center;
+}
+.clients-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+.icon-company-list {
+  display: flex;
+  justify-content: center;
+}
+.company-item {
+  margin-right: 30px;
+}
+.icon-company {
+  color: #afb1b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+.button-icon {
+  fill: currentColor;
+}
+.icon-company:hover {
+  color: var(--allocate-color);
+  border: 1px solid var(--allocate-color);
+}
+.icon-company:focus {
+  color: var(--allocate-color);
+}
 /* --------section 5-------- */
 .footer {
   background: #2f303a;
@@ -438,6 +524,44 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* ----присоединайся -----*/
+.footer-link {
+  margin-left: 70px;
+}
+.footer-title {
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+.footer-icon-list {
+  display: flex;
+  justify-content: center;
+}
+.footer-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.footer-icon-icon {
+  fill: var(--title-color);
+}
+.footer-icon-item + .footer-icon-item {
+  margin-left: 10px;
+}
+.footer-icon-link:hover {
+  background-color: var(--allocate-color);
+}
+.footer-icon-link:focus {
+  background-color: var(--allocate-color);
 }
 /* --------portfolio------ */
 
