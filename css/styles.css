@@ -166,6 +166,7 @@ ul {
 /* --------section 1-------- */
 
 .title {
+  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg-hero.jpg);
   background-color: #2f303a;
@@ -175,6 +176,7 @@ ul {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 1600px;
 }
 
 .hero-container {
@@ -363,6 +365,7 @@ ul {
 }
 
 .specialist-text {
+  margin-bottom: 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -418,7 +421,7 @@ ul {
   color: var(--allocate-color);
 }
 .clients-item + .clients-item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .clients-item {
   display: inline-block;
@@ -433,7 +436,7 @@ ul {
   justify-content: center;
 
   align-items: center;
-  color: currentColor;
+  color: #afb1b8;
 }
 .clients-img {
   fill: currentColor;
@@ -592,7 +595,9 @@ ul {
 }
 
 .main-button-btn {
-  background: #2196f3;
+  background-color: #f5f4fa;
+  color: #212121;
+  cursor: pointer;
   line-height: 1.62;
   font-size: 16px;
   font-weight: 500;
@@ -602,7 +607,19 @@ ul {
   display: block;
   min-width: 73px;
   text-align: center;
-  color: var(--button-text);
+
+  background: #f5f4fa;
+  transition-duration: 250ms;
+  transition-property: color, background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-button-btn:hover,
+.main-button-btn:focus {
+  background: #2196f3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
+    0px 2px 2px rgb(0 0 0 / 12%);
 }
 
 .main-button:hover,
@@ -610,6 +627,8 @@ ul {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* -----section picture---- */
@@ -618,6 +637,18 @@ ul {
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--pictures-margin));
   margin-top: calc(-1 * var(--pictures-margin));
+}
+.picture-link {
+  display: block;
+  transition-duration: 250ms;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.picture-link:hover,
+.picture-link:focus {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .border {
   border: 1px solid #eeeeee;
@@ -660,9 +691,7 @@ ul {
 }
 
 .picture-text {
-  padding-left: 24px;
   margin-top: 4px;
-  padding-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
